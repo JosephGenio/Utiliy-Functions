@@ -442,14 +442,25 @@
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="col-5 mx-auto">
-                    <div>
-                        <input class="form-control form-control-success my-2 sign-up-form fc-amount" fc-mode="allow-negative" type="text" name="txtAmount" id="txtAmount">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade" id="errorDiv">
+                        <span class="badge badge-pill badge-danger">Error</span>
+                        <p id="errroMessage"></p>
                     </div>
                     <div>
-                        <input class="form-control form-control-success my-2 sign-up-form fc-number" type="text" name="txtAccountNumber" id="txtAccountNumber">
+                        <input class="form-control form-control-success my-2 sign-up-form fc-amount" type="text"
+                            name="txtAmount" id="txtAmount">
                     </div>
                     <div>
-                        <input class="form-control form-control-success my-2 sign-up-form" type="text" name="MiddleName" id="MiddleName">
+                        <input type="text" class="form-control form-control-success my-2 sign-up-form fc-int"
+                            fc-mode="positive-only" type="text" name="age" id="age">
+                    </div>
+                    <div>
+                        <input class="form-control form-control-success my-2 sign-up-form fc-email" type="text"
+                            name="MiddleName" id="MiddleName">
+                    </div>
+                    <div>
+                        <input class="form-control form-control-success my-2 sign-up-form fc-int" type="text"
+                            name="test" id="test">
                     </div>
                     <button type="button" id="submit" class="btn btn-primary">Submit</button>
                 </div>
@@ -480,7 +491,7 @@
     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="vendor/select2/select2.min.js">
     </script>
-    <script src="utility/master-utility.js"></script>
+    <script src="utility/custom-form-validation.js"></script>
     <script src="js/index.js"></script>
 
     <!-- Main JS-->
