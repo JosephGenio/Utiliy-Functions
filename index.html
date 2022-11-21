@@ -455,14 +455,24 @@
                             fc-mode="positive-only" type="text" name="age" id="age">
                     </div>
                     <div>
-                        <input class="form-control form-control-success my-2 sign-up-form fc-email" type="text"
+                        <input class="form-control form-control-success my-2 sign-up-form fc-date" type="date"
                             name="MiddleName" id="MiddleName">
+                    </div>
+                    <input type="checkbox" name="chck1" id="chck1" class="form-control form-control-success  sign-up-form">
+                    <div>
+             <select name="" id="selId" class="form-control form-control-success sign-up-form">
+                <option value="">SELECT</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+             </select>
                     </div>
                     <div>
                         <input class="form-control form-control-success my-2 sign-up-form fc-int" type="text"
                             name="test" id="test">
                     </div>
                     <button type="button" id="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" id="clearForm" class="btn btn-primary">Clear Form</button>
                 </div>
             </div>
             <!-- END MAIN CONTENT-->
@@ -492,6 +502,7 @@
     <script src="vendor/select2/select2.min.js">
     </script>
     <script src="utility/custom-form-validation.js"></script>
+    <script src="js/master-utility.js"></script>
     <script src="js/index.js"></script>
 
     <!-- Main JS-->

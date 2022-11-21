@@ -9,5 +9,8 @@ var oErrorMessages = {
 
 elem("submit").onclick = ()=>{
     var test = CheckValidForm("sign-up-form","errorDiv",oErrorMessages);
-    console.log(test);
+    console.log(test)
+}
+elem("clearForm").onclick = ()=>{
+    ClearForm("sign-up-form","errorDiv");
 }
