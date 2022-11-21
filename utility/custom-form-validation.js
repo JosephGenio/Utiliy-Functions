@@ -69,7 +69,7 @@ function CheckValidForm(classNameReference, errorAlertDiv, oErrorMessage) {
 
     var masterFlag = 0;
     for (var i = 0; i < forElements.length; i++) {
-        if (IsEmpty(`${forElements[i].getAttribute('id')}`)) {
+        if (IsEmpty(`${forElements[i].getAttribute('id')}`) && (forElements[i].getAttribute("type")!="checkbox")) {
             failedEmptyInputs.push(forElements[i]);
         } else {
             forElements[i].classList.remove('is-invalid');
@@ -243,6 +243,25 @@ function CheckValidForm(classNameReference, errorAlertDiv, oErrorMessage) {
     } else {
         elem(errorAlertDiv).classList.add('show');
         return false;
+    }
+
+}
+
+function ClearForm(referenceClass, divError) {
+    if (divError != undefined) {
+        elem(divError).classList.remove('show');
+    }
+    var inputList = document.getElementsByClassName(referenceClass);
+    for (var i = 0; i < inputList.length; i++) {
+        inputList[i].classList.remove("is-invalid");
+        if (inputList[i].nodeName == 'INPUT') {
+            inputList[i].value = "";
+            if(inputList[i].getAttribute("type") == "checkbox"){
+                inputList[i].checked = false;
+            }
+        } else if (inputList[i].nodeName == 'SELECT') {
+            inputList[i].selectedIndex = 0;
+        }
     }
 
 }
